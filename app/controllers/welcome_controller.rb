@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-  skip_before_action :authenticate, only: :create
+  skip_before_action :authenticate
 
   def index; end
 end
