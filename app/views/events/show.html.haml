@@ -31,7 +31,7 @@
             .modal-header
               %h4.modal-title#dialogHeader 参加コメント
               %button.close{ type: "button", "data-dismiss": "modal" } &times;
-            = form_with(model: @event.tickets.build, url: event_tickets_path(@event)) do |f|
+            = form_with(model: @event.tickets.build, url: event_tickets_path(@event), local: false) do |f|
               .modal-body
                 #createTicketErrors
                 = f.text_field :comment, class: "form-control"
